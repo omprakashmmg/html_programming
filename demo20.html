@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+    <img src="m-blog-2.jpg" height="500px" id="img1">
+    <img src="m-blog-5.jpg"height="500px" id="img2">
+    <button onclick="demo()">print img path</button>
+    <script>
+        function demo()
+        {
+          
+            //var img=document.getElementById("img1").src;
+            //alert(img.src)
+            var img1=document.getElementById("img1");
+            var img2=document.getElementById("img2");
+            var path1=img1.src;
+            var path2=img2.src;
+            img1.src=path2;
+            img2.src=path1;
+            document.write(img);
+        }
+    </script>
+</body>
+</html>

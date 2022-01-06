@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>clear inter val</title>
+  <style>
+      body{
+        background: black;
+      }
+      #outer
+      {
+          height: 300px;
+          width: 900px;
+          margin: 200px auto;
+        }
+         .col
+         {
+             height: 250px;
+             width: 250px;
+             background: rgb(10, 98, 180);
+             border:10px groove white;
+             float: left;
+             line-height: 250px;
+             text-align: center;
+             font-size: 90px;
+             color: rgba(10, 10, 10, 0.897);
+             border-radius: 40px;
+             margin: 10px;
+             font-family: impact;
+         } .btn
+         {
+             height: 50px;
+             width: 100px;
+             border: none;
+             background-color: turquoise;
+             color: white;
+             font-size: 20px;
+             font-family: arial;
+             padding: px;
+             box-shadow: 0px 0px 0px 2px white;
+             
+         }
+     
+  </style>
+</head>
+<body onload="demo()">
+    <center><h1 style="color:rgb(4, 98, 238);line-height:0px;font-size: 50px;font-family:monotype corsiva;
+     "
+        >DIGITAL CLOCK !!</h1></center>
+   <div id="outer">
+       <div class="col" id="h">HH</div>
+       <div class="col" id="m">MM</div>
+       <div class="col" id="s">SS</div>
+       
+   </div> 
+   <script>
+  function demo()
+  {
+      var h=document.getElementById("h")
+      var m=document.getElementById("m")
+      var s=document.getElementById("s")
+      var x=new Date()
+      stutas="AM";
+      hh=x.getHours();
+      mm=x.getMinutes();
+      ss=x.getSeconds();
+      if(hh>12)
+      {
+          hh=hh-12;
+          stutas="PM";
+        }if(hh<10)
+        
+       hh="0"+hh;
+       if(mm<10)
+       mm="0"+mm;
+       if(ss<10)
+       ss="0"+ss;
+        
+       s.innerText=ss+stutas;
+       m.innerText=mm;
+       h.innerText=hh;
+      
+  }
+  window.setInterval(demo,1000)
+   </script>
+</body>
+</html>

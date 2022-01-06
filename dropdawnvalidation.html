@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="frm" onsubmit="return demo()">
+    <select>
+        <option value="">SELECT</option>
+        <option value="">SUMMER TRANNING</option>
+        <option value="">WINTER TRANNING</option>
+        <option value="">VOCATIONAL TRANNING</option>
+        <option value="">APPRENTICESHIP</option>
+    </select>
+    <p></p>
+    <input type="submit" value="SAVE">
+    </form>
+    <script>
+        "use strict"
+        var demo=()=>{
+            var ddl=document.querySelector("select");
+            var a=ddl.value;
+            var err=document.querySelector("p");
+            //alert(ddl.value);
+            if(a=="SELECT"){
+                err.innerText="please select any option....";
+                err.style.color="red";
+                a.style.border="2px solid red";
+                return false;
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

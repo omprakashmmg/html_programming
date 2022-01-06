@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var  student={name:"omprakash",
+        college:"cicst",
+        age:19,
+        address:"cktd",
+    demo:function (){
+//document.write("i am from fun 1"+"<br/>")
+return "i am from fun1";
+    },
+    demo1:function(){
+        //document.write("i am from fun2"+"<br/>")
+        return "i am from fun2";
+    },
+    branch:"cs",
+}
+//document.writeln(student.name+"<br/>");
+/*document.writeln(student.college+"<br/>");
+document.writeln(student.age+"<br/>");
+document.writeln(student.address+"<br/>");
+document.writeln(student.branch+"<br/>");*/
+document.write(`name :${student.name} <br/>  college:${student.college}<br/> 
+age:${student.age}<br/>   address :${student.address}<br/>  ${student.demo()}<br/>  ${student.demo1()}`);//string template
+//student.demo()
+//student.demo1()
+
+    </script>
+</body>
+</html>

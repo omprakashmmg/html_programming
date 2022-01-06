@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>addevent listner</h1>
+    <button >click me</button>
+</center>
+<script>
+    var fun1=()=>{
+        alert("i am from first function")
+    }
+    var fun2=()=>{
+        alert("i am from second function");
+    }
+    var fun3=()=>{
+        alert("i am from third function");
+    }
+    document.querySelector("button").addEventListener("click",fun1);
+    document.querySelector("button").addEventListener("click",fun2);
+    document.querySelector("button").addEventListener("click",fun3);
+    </script>
+</body>
+</html>

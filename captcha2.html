@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            height:300px;
+            width: 800px;
+            border:8px groove purple;
+            padding: 30px;
+            font-size: 26px;
+            text-align: center;
+            font-weight: bold;
+            color: grey;
+            margin: 100px auto;
+            background: crimson;
+        }input{
+            height: 40px;
+            text-align: left;
+            width: 300px;
+            font-size: 20px;
+            outline: none;
+            border:2px solid green;
+            
+        }img{
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            margin: 10px;
+        }s{
+            height: 60px;
+            width: 100px;
+            margin-left: 20px;
+            font-size:30px;
+            border: 1px solid black;
+            transform: translateY(-900px);
+        }button{
+            height: 50px;
+            width: 120px;
+            border: none;
+            background: brown;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body onload="demo()">
+    <div id="outer">
+        User Name-:<br/>
+        <input type="text" id="txt1"><br/>
+        Password-:<br/>
+        <input type="password" id="pass"><br/>
+        enter captcha code-:<br/>
+        <input type="text" id="txt"><br/>
+        <img src="img/download.png" alt="noting" height="40px"onclick="demo()"><s id="getcap">opyadav</s></br>
+        <p id="msg"></p>
+        <button onclick="demo2()">LOGIN</button>
+
+    </div>
+    <script>
+        function demo()
+        {
+            var str="0987654321qwertyuiopasdfghjklzxcvbnm";
+            var captcha="";
+            for(let i=0;i<6;i++)
+            {
+               var cindex=Math.floor(Math.random()*str.length);
+               captcha+=str.charAt(cindex);
+                }
+                var x=document.getElementById("getcap").innerText=captcha;
+            }
+            function demo2()
+            {
+                var value=document.getElementById("txt").value;
+                var captcha=document.getElementById("getcap").innerText;
+                var msg=document.getElementById("msg");
+               
+                var user="omprakash";
+                var pas="opyadav";
+                var user=document.getElementById("txt1").value;
+                var ps=document.getElementById("pass").value;
+                if(value==captcha){
+                    if(txt1==user && pas==ps)
+                    {
+                        window.location="captcha.html"
+                    }else{
+                        msg.innerText="invalid username and password";
+                        msg.style.color="red";
+                    }
+                }else{
+                    msg.innerText="invalid captcha";
+                    msg.style.color="red";
+                                    }
+            }
+    </script>
+</body>
+</html>

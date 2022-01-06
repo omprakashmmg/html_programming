@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="demo()">
+    <b class="a">summer tranning</b>
+    <b class="a">winter tranning</b>
+    <b class="a">apprentship tranning</b>
+    <b id="msg"></b>
+    <script>
+        function demo()
+        {
+            var a=document.getElementsByClassName("a");
+            var res="<select>";
+        for(var i=0;i<a.length;i++)
+        {
+            res=res+"<option>"+a[i].innerText+"</option>"
+        }
+        res+="</select>"
+        document.getElementById("msg").innerHTML=res;
+
+        }
+    </script>
+</body>
+</html>

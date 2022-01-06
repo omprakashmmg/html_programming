@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: auto;
+            width: 400px;
+            border:4px solid black;
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 100px auto;
+        }input{
+            height: 30px;
+            width: 200px;
+            border: 2px solid black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body onload="demo1()">
+    <div id="box">
+        user name-:<br/>
+        <input type="text" id="uname"><br/>
+        Password-:<br/>
+        <input type="password" id="passw"><br/>
+        enter captcha code-:<br/>
+        <input type="text" id="txt"><br/>
+        <s>we2e</s><img src="img/cap.jpg" height="40px" onclick="demo1()"><br/>
+        <p id="msg"></p>
+        <button onclick="demo2()">LOGIN</button>
+    </div>
+        <script>
+            function demo1()
+            {
+                var str="0987654321qwertyuiopasdfghjklzxcvbnm";
+                var cap="";
+                //alert(str.length)
+                for(var i=0;i<6;i++)
+                {
+                    var ri=Math.floor(Math.random()*str.length)
+                    //alert(ri)
+                    cap+=str.charAt(ri);
+                    //alert(cap)
+                    document.querySelector("s").textContent=cap;
+                }
+            }
+            function demo2()
+            {
+                var v=document.getElementById("txt").value;
+                var c=document.querySelector("s").innerText;
+                var msg=document.getElementById("msg");
+               
+                var user="omprakash";
+                var passw="opyadav";
+                var user1=document.getElementById("uname").value;
+                var pass=document.getElementById("passw").value;
+                if(v==c)
+                {
+                    //msg.innerText="valid captcha"
+                 if(user==user1 && passw==pass)
+                 {
+                     //alert("welcome to the dashboard");
+                     window.location="divcolor.html";
+                 }else{
+                     msg.innerText="invalid username and password";
+                     msg.style.color="red";
+                 }
+
+                }
+                else{
+                    msg.innerText="invalid captcha" ;
+                    msg.style.color="red"; 
+                }
+
+            }
+        </script>
+  
+</body>
+</html>

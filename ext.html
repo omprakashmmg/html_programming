@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="fi" onchange="demo(this)">
+    <p id="p1"></p>
+    <script>
+        function demo(x)
+        {
+            //alert(x.value);
+//document.write(x.value)
+var path=x.value;
+//alert(path)
+//var x=path.lastIndexOf(".")
+//alert(path.substring(x+1))
+var x=path.substring(path.lastIndexOf('.')+1).toUpperCase();
+alert(x)
+var p=document.getElementById("p1")
+if(x=="JPG"|| x=="JPEG" || x=="PNG"){
+    p.innerText="valid file";
+    p.style.color="white";
+    p.style.background="purple"
+    p.style.fontFamily="bold"
+    p.style.fontSize="20px"
+ 
+}else{
+    p.innerText="invalide file";
+    p.style.color="red"
+    p.style.background="aqua"
+    p.style.fontSize="20px"
+    p.style.fontFamily="bold"
+}
+        }
+    </script>
+</body>
+</html>

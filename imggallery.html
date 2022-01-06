@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image onmouce function</title>
+    <style>
+        .inner{
+            height: 300px;
+            width: 1000px;
+            background-color: rgb(221, 158, 158);
+        }.col
+        {
+            height: 270px;
+            width: 300px;
+            float: left;
+            margin:  15px;
+            background:white;
+        }.col img{
+            height: 100%;
+            width: 100%;
+        }#modal{
+         height: 600px;
+          width: 100%;
+         background:rgba(0,0,0,.5);
+         position: fixed;
+         top: 80px;
+         display: none;
+
+        }#imodal
+        {
+            min-height: 400px;
+            width: 500px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid grey;
+            box-shadow:0px 0px 0px 0px rgba(19, 18, 18, 0.911) ;
+            margin: 0px auto;
+        }#mimg
+        {
+            height: 270px;
+            width: 480px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>IMAGE GALLERY</h1></center>
+    <div id="outer" style="height: 600px;width:1000px;background-color:rgb(160, 101, 101);
+    margin: 0px 200px; border: 10px groove rgb(146, 118, 146);">
+        <div class="inner1">
+            <div class="col">
+                <img src="img/img.jpg" onclick="demo(this)">
+            </div>
+            <div class="col"> <img src="img/img2.jpg"onclick="demo(this)"></div>
+            <div class="col"> <img src="img/img3.jpg"onclick="demo(this)"></div>
+        </div>
+        <div class="inner">
+            <div class="col"> <img src="img/6.jfif"onclick="demo(this)"></div>
+            <div class="col"> <img src="img/4.jfif"onclick="demo(this)"></div>
+            <div class="col"> <img src="img/5.jfif"onclick="demo(this)"></div>
+        </div>
+    </div>
+    <!-------start modal------->
+    <div id="modal">
+        <div id="imodal">
+            <center><h1>GALLERY</h1></center><a href="function5.html" style="
+                 text-decoration:none;font-size: 30px;color:grey;float: right;transform:
+				 translateY(-75px);margin-right: 20px; 
+                 ">x</a>
+            <img src="img3.jpg" id="mimg">
+        </div>
+    </div>
+     <!-------end modal------->
+     <script>
+         function demo(x)
+         {
+var m=document.getElementById("modal")
+var mimg=document.getElementById("mimg")
+m.style.display="block";
+//alert(x.src)
+mimg.src=x.src;
+         }
+     </script>
+</body>
+</html>

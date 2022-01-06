@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foreach 2</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <input type="text" id="txt">
+    <script>
+        var courselist=["summertranning","wintertranning","vocationaltranning","apprenticship"]
+        var res="<select id='ddl' onchange='demo(this)''>";
+    courselist.forEach(function (x){
+
+res=res+"<option>"+x+"</option>";
+
+    })
+    res+="<select/>"
+var p=document.getElementById("p1");
+p.innerHTML=res;
+
+//var a=document.getElementById("ddl").value;
+function demo(y)
+{
+   
+    var t=document.getElementById("txt");
+    if(y.value == "summertranning")
+    {
+    t.value="5000";
+    }
+    if(y.value=="wintertranning")
+    {
+        t.value="8000"
+    }if(y.value=="apprenticship")
+    {
+        t.value="15000"
+    }if(y.value=="vocationaltranning")
+    {
+t.value="3000"
+    }
+}
+</script>
+</body>
+</html>

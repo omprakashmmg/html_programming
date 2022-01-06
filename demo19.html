@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>slider</title>
+</head>
+<body onload="demo()">
+   <div id="img1"> <img  src="img.jpg" style="height: 200px;width:400px; float: left;margin:20px;"></div>
+   <div id="img2"><img src="m-blog-2.jpg"style="height: 200px;width:400px; float: left;margin:20px;"></div>
+   <div id="img3"><img  src="m-blog-5.jpg"style="height: 200px;width:400px;float: left;margin:20px;"></div>
+  
+    <script>
+        function demo()
+        {
+        var i1=document.getElementById("img1");
+        var i2=document.getElementById("img2");
+        var i3=document.getElementById("img3");
+        var t1=i1.innerHTML;
+        var t2=i2.innerHTML;
+        var t3=i3.innerHTML;
+        i1.innerHTML=t2;
+        i2.innerHTML=t3;
+        i3.innerHTML=t1;
+        }
+        window.setInterval(demo,2000)
+    </script>
+    
+</body>
+</html>

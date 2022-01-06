@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 30px;
+            width: 200px;
+            border: 2px solid purple;
+            color: black;
+        }button{
+            border: none;
+            height: 30px;
+            width: 100px;
+            background: maroon;
+            color: white;
+            font-size: 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body><center>
+    <fieldset style="width: 250px;color:red;font-size: 20px;">
+        <legend>
+            LOGIN FORM....
+        </legend>
+        username<br/><input type="=text" id="txt1"><br/>
+        Password<br/><input type="=password" id="txt2"><br/>
+        <button onclick="demo()">LOGIN !</button>
+    </fieldset>
+</center>
+<script>
+    function demo()
+    {
+var user="TPTST20";
+var password="TECHPILE@123"
+var u=document.getElementById("txt1").value.trim();
+var p=document.getElementById("txt2").value.trim();
+//alert(u+"||"+p)
+if(user==u && password==p){
+    alert("welcome to new page")
+    window.location="trim.html"
+}else{
+    alert("connection failed")  
+}
+    }
+</script>
+</body>
+</html>

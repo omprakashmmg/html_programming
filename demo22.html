@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password hide</title>
+</head>
+<body>
+    <input type="password" id="txt1"><br/>
+    <input type="button" value="show password"id="btn" onclick="demo()"><br/>
+    <script>
+        function demo()
+        {
+var txt=document.getElementById("txt1")
+var but=document.getElementById("btn")
+but.style.background="red";
+but.style.color="white";
+
+if(but.value=="show password")
+
+{
+    but.value="hide password"
+    txt.type="text";
+    but.style.background="red";
+but.style.color="white";
+}else{
+    but.value="show password"
+    txt.type="password";
+}
+        }
+    </script>
+</body>
+</html>

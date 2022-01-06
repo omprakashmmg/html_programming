@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+         name:"ram",
+         college:"techpile",
+        // fun1:function demo()
+        fun1()
+         {
+            // alert(obj.name);
+            document.write(this.name+"<br/>");
+         },
+         //fun2:function demo()
+         fun2()
+         {
+            document.write(obj.college);
+         }
+        };
+        obj.fun1();
+        obj.fun2();
+    </script>
+</body>
+</html>

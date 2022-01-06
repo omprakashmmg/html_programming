@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var studentinfo=[{name:"omprakash yadav",college:"cicst chitrakoot",age:25,branch:"BCA"},
+        {name:"rohit",college:"gbic chitrakoot",age:20,branch:"CA"},
+        { name:"ravi yadav",college:" chitrakoot",age:25,branch:"it"}];
+        /*document.write(`name:${studentinfo[0].name}<br/>college:${studentinfo[0].college}<br/>
+        age:${studentinfo[0].age}<br/>branch:${studentinfo[0].branch}<br/>`)*/
+        var res="<table border :'10px'><tr ><th>name</th><th>college</th><th>age</th><th>branch</th></tr>";
+            for(var i=0;i<studentinfo.length;i++){
+                res=res+"<tr onclick='demo(this)'><td>"+studentinfo[i].name+"</td><td>"+studentinfo[i].college+"</td><td>"
+                    +studentinfo[i].age+"</td><td>"+studentinfo[i].branch+"</td></tr>";
+            }
+           res+="</table>";
+           document.write(res)
+           var demo=(x)=>{
+               var a=confirm("are you sure to hide this row");
+               if(a==true){
+               x.style.display="none";
+           }
+        }
+    </script>
+</body>
+</html>

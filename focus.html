@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   onfocus <input type="text" onfocus="demo(this)"  onblur="demo2(this)"id="t1"><br/>
+    onblur<input type="text" id="t2"><br/>
+    <p></p>
+    <script>
+        function demo(x)
+        {
+            x.style.border="2px solid red";
+            document.querySelector("p").innerText=x.value;
+        }
+        function demo2(x)
+        {
+            x.style.border="2px solid green";
+        }
+    </script>
+</body>
+</html>

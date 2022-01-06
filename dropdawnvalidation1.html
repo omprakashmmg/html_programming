@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return demo()">
+        <select>
+            <option>SELECT</option>
+            <option>HTML</option>
+            <option>JS</option>
+            <option>CSS</option>
+            <option>JQ</option>
+        </select>
+        <p></p>
+        <input type="submit" value="SAVE">
+    </form>
+    <script>
+        function demo(){
+            var a=document.querySelector("select");
+            var b=document.querySelector("p");
+            if(a.value=="SELECT"){
+                b.innerText="please select any option...." .toUpperCase();
+                b.style.color="red";
+                a.style.border="2px solid red"
+                return false;
+        
+            }
+        }
+    </script>
+</body>
+</html>

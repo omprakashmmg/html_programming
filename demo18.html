@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setinterval function</title>
+    <style>
+        #dv1,#dv3
+        {
+            height: 100px;
+            width: 100px;
+            background: red;
+            color: white;
+            font-size: 30px;
+            line-height: 100px;
+            float: left;
+            border: 10px solid red;
+        }#dv2{
+            height: 100px;
+            width: 100px;
+            background:maroon;
+            color: white;
+            border: 10px solid rgb(13, 126, 160);
+            font-size: 30px;
+            line-height: 100px;
+            float: left;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="dv1">A</div>
+    <div id="dv2">B</div>
+    <div id="dv3">C</div>
+    <button onclick="demo()">swap</button>
+    <script>
+        function demo()
+        {
+            var d1=document.getElementById("dv1")
+            var d2=document.getElementById("dv2")
+            var d3=document.getElementById("dv3")
+            var txt1=d1.innerText;
+            var txt2=d2.innerText;
+            var txt3=d3.innerText;
+            d3.innerText=txt1;
+            d2.innerText=txt3;
+            d1.innerText=txt2;
+        }
+        //window.setInterval(demo,2000)
+        window.setTimeout(demo,1000)
+    </script>
+</body>
+</html>

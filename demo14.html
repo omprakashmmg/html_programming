@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1"><br/>
+    <input type="text" id="t2"><br/>
+    <button onclick="add()">add</button></br>
+    <input type="text" id="t3"><br/>
+    <script>
+        function add()
+        {
+            var val1=document.getElementById("t1").value;
+            var val2=document.getElementById("t2").value;
+            var res=document.getElementById("t3");
+            var result=parseFloat (val1)+parseFloat (val2);
+            res.value=result.toFixed(2);
+        }
+    </script>
+</body>
+</html>

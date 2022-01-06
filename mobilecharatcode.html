@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;
+            width: 250px;
+            border: 2px solid purple;
+            font-size: 20px;
+        }h1{
+            color: saddlebrown;
+        }button{
+            height: 30px;
+            width: 80px;
+            border: none;
+            background: seagreen;
+            color: white;
+            margin: 5px;
+        }::placeholder
+        {
+            font-size: 20px;
+            color: grey;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>INDIAN MOBILE VALIDATION</h1>
+    <input type="number" id="num" placeholder="Enter mobile number" required><br/>
+    <b id="msg"></b><br/>
+    <button onclick=" demo()">CHECK</button>
+</center>
+<script>
+    function demo()
+    {
+        var i=document.getElementById("num");
+        var v=i.value;
+        var msg=document.getElementById("msg")
+        //alert(v.charAt(0))
+        if((v.charAt(0)=="9" ||v.charAt(0)=="8" || v.charAt(0)=="7" || v.charAt(0)=="6") &&
+		v.length=="10"){
+            msg.innerText="valid mobile number";
+            msg.style.color="green"
+            i.style.border="2px solid green"
+        }
+        else{
+            msg.innerText="invalid mobile number";
+            msg.style.color="red"
+            i.style.border="2px solid red"
+        }
+
+    }
+</script>
+</body>
+</html>

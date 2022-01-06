@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="frm" onsubmit="return demo()">
+    SELECT COURSE<input type="radio" class="a" name="c"/>HTML
+    <input type="radio" class="a" name="c"/>CSS
+    <input type="radio" class="a" name="c"/>JS
+    <input type="radio" class="a" name="c"/>JQ
+    <input type="submit" value="SAVE">
+</form>
+<p></p>
+<script>
+    "use strict"//strict mode
+function demo(){
+ var rdbtn=document.getElementsByClassName("a");
+ var count=0;
+ for(var x of rdbtn){
+    // alert(x);
+     if(x.checked==true){
+    count++;
+     }
+  }
+ if(count==0){
+  document.querySelector("p").innerText="please select any one option...";
+  document.querySelector("p").style.color="red"
+  return false;
+     }
+}
+</script>
+</body>
+</html>

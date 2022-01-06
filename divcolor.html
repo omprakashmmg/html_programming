@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            height: 500px;
+            width: 900px;
+            border: 2px solid black;
+            margin: 0px auto;
+        }#inner{
+            height: 200px;
+            width: 600px;
+            border: 2px solid black;
+            margin: 10px auto;
+            padding: 10px;
+        }input{
+            height: 100px;
+            width: 300px;
+            margin: 0px auto;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 25px;
+            transform: translateX(300px);
+            border: 2px solid purple;
+        }button{
+            height: 60px;
+            width: 150px;
+            color: black;
+            font-size: 22px;
+            text-align: center;
+            background: crimson;
+            border: none;
+            transform: translateX(345px);
+            margin: 20px;
+        }
+    </style>
+</head>
+<body onload="demo()">
+    <center>
+        <h1>div color change</h1>
+        
+    </center>
+    <div id="outer">
+
+        <div id="inner"></div>
+        <input type="text" id="txt"/><br/>
+        <button onclick="demo1()">click</button>
+    </div>
+    <script>
+     
+      
+        var char="0123456789abcdef";
+        var color="#";
+        for(var i=0;i<6;i++)
+        {
+            var index=Math.floor(Math.random()*char.length);
+            color+=char.charAt(index);
+        }
+        var dv=document.getElementById("inner");
+        dv.style.background=color;
+        var txt=document.getElementById("txt");
+        txt.value=color;
+
+  
+
+        function demo1()
+        {
+            var bt=document.getElementById("outer");
+            bt.style.background=color;
+        } 
+
+    </script>
+</body>
+
+</html>

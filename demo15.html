@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplication</title>
+</head>
+<body>
+    <input type="text" id="in1"><br/>
+    <input type="text" id="in2"><br/>
+    <input type="text" id="in3"><br/>
+    <button onclick="multi()">multi</button><br/>
+    <script>
+        function multi()
+        {
+            var bx1=document.getElementById("in1").value;
+            var bx2=document.getElementById("in2").value;
+            var multi=document.getElementById("in3");
+            var result=parseInt(bx1)*parseInt(bx2);
+            multi.value=result;
+
+        }
+    </script>
+</body>
+</html>

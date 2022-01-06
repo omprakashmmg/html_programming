@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var demo=(name,...x)=>{
+
+var sum=0;
+for(var a of x){
+sum=sum+a;
+//alert(sum)
+}
+document.write(`name is ${name}and sum of ${sum}<br/>`);
+        }
+        demo("RAM",10,20);
+        demo("SHAYM",10,20);
+        demo("MOHAN",10,23,30,40,50,70);
+    </script>
+</body>
+</html>

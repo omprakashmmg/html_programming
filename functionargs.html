@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* function demo(x,y=20){//y default parametar
+alert(x+y)
+        }
+        demo(10,50)//60
+        //demo(10)//40*/
+
+        function demo(x,y,...a){//...a is rest operator
+            alert(x);
+            alert(y);
+            alert(a);
+        }
+        //demo(10);
+       // demo("ram",10);
+        demo(10,20,30,"ram");
+    </script>
+</body>
+</html>

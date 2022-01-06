@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>clear inter val</title>
+  <style>
+      body{
+        background: black;
+      }
+      #outer
+      {
+          height: 300px;
+          width: 900px;
+          margin: 200px auto;
+        }
+         .col
+         {
+             height: 250px;
+             width: 250px;
+             background: rgb(136, 36, 161);
+             border:10px groove white;
+             float: left;
+             line-height: 250px;
+             text-align: center;
+             font-size: 90px;
+             color: rgba(10, 10, 10, 0.897);
+             border-radius: 40px;
+             margin: 10px;
+             font-family: impact;
+         } .btn
+         {
+             height: 50px;
+             width: 100px;
+             border: none;
+             background-color: turquoise;
+             color: white;
+             font-size: 20px;
+             font-family: arial;
+             padding: px;
+             box-shadow: 0px 0px 0px 2px white;
+             
+         }
+     
+  </style>
+</head>
+<body onload="demo()">
+   <div id="outer">
+       <div class="col" id="h">HH</div>
+       <div class="col" id="m">MM</div>
+       <div class="col" id="s">SS</div>
+       <button class="btn" onclick="demo1()">START</button>
+       <button class="btn" onclick="demo2()">STOP</button>
+   </div> 
+   <script>
+      
+var hh=0;
+var ss=0;
+var mm=0;
+function demo()
+       {
+var h=document.getElementById("h")
+var m=document.getElementById("m")
+var s=document.getElementById("s")
+ss++;
+if(ss>=60)
+{
+    ss=0;
+    mm++;
+    if(mm>=60)
+    {
+        mm=0;
+        hh++;
+    }
+}
+
+
+s.innerText=ss;
+m.innerText=mm;
+h.innerText=hh;
+}
+function demo1()
+{
+    a=window.setInterval(demo,10)
+}
+function demo2()
+{
+    window.clearInterval(a);
+}
+
+   </script>
+</body>
+</html>

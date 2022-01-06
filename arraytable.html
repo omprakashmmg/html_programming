@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="demo()">
+   <p></p> 
+   <script>
+       var demo=()=>{
+       var studentinfo=[
+      {name:"omprakash yadav",college:"cktd i c",age:19,branch:"BCA"},
+      {name:"prashant",college:"I.E.T",age:21,branch:"B tech"},
+      {name:"ram",college:"cktd i c",age:20,branch:"Bcom"},{
+        name:"ravi yadav",college:"lucknowuni",age:19,branch:"CA"
+      },{  name:"raj ",college:"lucknow",age:19,branch:"CA"},]
+      var tb="<table border='1'><tr><th>name</th><th>college</th><th>age</th><th>branch</th></tr>";
+        var dd="<select>";
+            var or="<ol>";
+                var un="<ul>";
+      for (var x of studentinfo)
+      //for (var x in studentinfo)for index
+      {
+          //alert(studentinfo[x].name);
+          tb+="<tr><td>"+x.name+"</td><td>"+x.college+"</td><td>"+x.age+"</td><td>"+x.branch+"</td></tr>";
+          dd+="<option>"+x.name+"</option>"+"<option>"+x.college+"</option>"+"<option>"+x.college+"</option>"+
+        "<option>"+x.branch+"</option>";
+          or+="<li>"+x.college+"</li>";
+          un+="<li>"+x.branch+"</li>";
+      }
+      tb+="</table>";
+      dd+="</select>";
+      or+="</ol>";
+      un+="</ul>";
+      document.querySelector("p").innerHTML=tb+dd+or+un;
+     // document.querySelector("p").innerHTML=dd;
+    }
+   </script>
+</body>
+</html>

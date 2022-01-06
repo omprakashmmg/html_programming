@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+    <img src="../javascript/img/img2.jpg" height="300px" id="img1">
+    <img src="../javascript/img/img3.jpg"height="280px" id="img2">
+    <img src="../javascript/img/img4.jfif"height="300px" id="img3">
+    <img src="../javascript/img/img5.jfif"height="300px" id="img4">
+    <button onclick="demo()">print img path</button>
+    <script>
+        function demo()
+        {
+          
+        
+            var img1=document.getElementById("img1");
+            var img2=document.getElementById("img2");
+            var img3=document.getElementById("img3");
+            var img4=document.getElementById("img4");
+            var path1=img1.src;
+            var path2=img2.src;
+            var path3=img3.src;
+            var path4=img4.src;
+            img1.src=path2;
+            img2.src=path1;
+            img3.src=path4;
+            img4.src=path3;
+            document.write(img);
+        }
+        window.setInterval(demo,1000)
+    </script>
+</body>
+</html>

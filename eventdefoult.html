@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" onsubmit="return  demo(event)">
+    <input type="text" id="box">
+    <input type="submit" value=" ok">
+   
+</form>
+<p></p>
+<script>
+function demo(x){
+    //alert(x);
+    var a=document.querySelector("p");
+    //x.preventDefault();
+    var b=document.getElementById("box");
+    var c=b.value;
+    if(c.length<3 || c.length >50 ){
+        a.innerText="invalid inputed name";
+        a.style.color="red";
+    x.preventDefault();
+    }
+    return false;
+}
+</script>
+</body>
+</html>

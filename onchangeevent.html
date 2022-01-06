@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>onchange event</title>
+</head>
+<body>
+   <select id="ddl" onchange="demo(this)">
+       <option >--Select Course--</option>
+       <option  value="1000">HTML</option>
+       <option  value="1500">CSS</option>
+       <option value="2000">JS</option>
+       <option value="5000">JQUERY</option>
+       <option value="3500" >JSON</option>
+       <option  value="1200">AJAX</option>
+   </select> 
+   <p1 id="p1"></p1>
+   <script>
+       function demo(x)
+       {
+          // var a=document.getElementById("ddl").value;
+document.getElementById("p1").innerText=x.value;
+
+           //alert(a);
+
+       }
+   </script>
+</body>
+</html>

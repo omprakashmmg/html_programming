@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;
+            width: 250px;
+            border: 2px solid purple;
+            font-size: 20px;
+        }h1{
+            color: saddlebrown;
+        }::placeholder
+        {
+            font-size: 20px;
+            color: grey;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>\
+        <h1>PINCODE VALIDATION</h1>
+    <input type="number" id="num" placeholder="Enter your pincode" required onkeypress="demo()"><br/>
+    <b id="msg"></b><br/>
+  
+</center>
+<script>
+    function demo()
+    {
+        var i=document.getElementById("num");
+        var v=i.value;
+        var msg=document.getElementById("msg")
+        //alert(v.charAt(0))
+        //if((v.charAt(0)=="2") && v.length=="5")
+        if(v.length=="5"){
+            msg.innerText="valid pincode";
+            msg.style.color="green"
+            i.style.border="2px solid green"
+        }
+        else{
+            msg.innerText="invalid pincode";
+            msg.style.color="red"
+            i.style.border="2px solid red"
+        }
+
+    }
+</script>
+</body>
+</html>
